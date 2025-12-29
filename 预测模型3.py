@@ -49,35 +49,49 @@ st.set_page_config(
 # 自定义CSS
 st.markdown("""
 <style>
+    /* 全局字体设置（可选） */
+    body, .stApp {
+        font-family: 'Arial', sans-serif;
+    }
+
     .main-header {
         font-size: 2.5rem;
-        color: #2E86C1;
+        color: #FF0000;  /* 红色字体 */
+        background-color: #F0F0F0;  /* 浅灰色背景 */
         text-align: center;
         margin-bottom: 1rem;
+        padding: 1rem;  /* 添加内边距让背景更明显 */
+        border-radius: 0.5rem;  /* 圆角 */
     }
     .sub-header {
         font-size: 1.5rem;
-        color: #3498DB;
+        color: #00FF00;  /* 绿色字体 */
+        background-color: #333333;  /* 深色背景 */
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
     }
     .success-box {
         background-color: #D5F5E3;
         padding: 1rem;
         border-radius: 0.5rem;
         border-left: 5px solid #27AE60;
+        color: #0d3b1e;  /* 深绿色字体 */
     }
     .warning-box {
         background-color: #FDEBD0;
         padding: 1rem;
         border-radius: 0.5rem;
         border-left: 5px solid #F39C12;
+        color: #7d5a29;  /* 深棕色字体 */
     }
     .info-box {
         background-color: #D6EAF8;
         padding: 1rem;
         border-radius: 0.5rem;
         border-left: 5px solid #3498DB;
+        color: #1c3a56;  /* 深蓝色字体 */
     }
     .metric-card {
         background-color: #F8F9F9;
@@ -85,9 +99,10 @@ st.markdown("""
         border-radius: 0.5rem;
         border: 1px solid #D5D8DC;
         text-align: center;
+        color: #2C3E50;  /* 深灰色字体 */
     }
     .stButton>button {
-        background-color: #2E86C1;
+        background-color: #FF5733;  /* 橙色按钮 */
         color: white;
         font-weight: bold;
         border-radius: 0.5rem;
@@ -95,7 +110,7 @@ st.markdown("""
         border: none;
     }
     .stButton>button:hover {
-        background-color: #3498DB;
+        background-color: #FF8C66;  /* 悬停时更浅的橙色 */
     }
 </style>
 """, unsafe_allow_html=True)
@@ -1869,4 +1884,5 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True
+
 )
