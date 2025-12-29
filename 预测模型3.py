@@ -49,68 +49,276 @@ st.set_page_config(
 # 自定义CSS
 st.markdown("""
 <style>
-    /* 全局字体设置（可选） */
-    body, .stApp {
-        font-family: 'Arial', sans-serif;
+    /* 全局字体设置 */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+        font-family: 'Inter', sans-serif;
     }
-
+    
+    /* 主标题 - 渐变文字效果 */
     .main-header {
-        font-size: 2.5rem;
-        color: #FF0000;  /* 红色字体 */
-        background-color: #F0F0F0;  /* 浅灰色背景 */
+        font-size: 2.8rem;
+        background: linear-gradient(45deg, #00FFFF, #0080FF, #8000FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         text-align: center;
-        margin-bottom: 1rem;
-        padding: 1rem;  /* 添加内边距让背景更明显 */
-        border-radius: 0.5rem;  /* 圆角 */
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        text-shadow: 0 2px 10px rgba(0, 128, 255, 0.3);
+        padding: 1rem;
+        border-bottom: 3px solid #2A3F5F;
     }
+    
+    /* 子标题 - 高对比度设计 */
     .sub-header {
-        font-size: 1.5rem;
-        color: #00FF00;  /* 绿色字体 */
-        background-color: #333333;  /* 深色背景 */
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
+        font-size: 1.8rem;
+        color: #FFFFFF;  /* 纯白色 */
+        background-color: #1E3A5F;  /* 深蓝色背景 */
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        border-left: 5px solid #00D4FF;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
+    
+    /* 成功提示框 - 深色背景高对比度 */
     .success-box {
-        background-color: #D5F5E3;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-left: 5px solid #27AE60;
-        color: #0d3b1e;  /* 深绿色字体 */
+        background-color: #0A3D2F;  /* 深绿色背景 */
+        color: #00FFAA;  /* 亮绿色文字 */
+        padding: 1.2rem;
+        border-radius: 10px;
+        border-left: 6px solid #00FF88;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0, 255, 136, 0.15);
+        border: 1px solid #1B5E45;
     }
+    
+    /* 警告提示框 - 深色背景高对比度 */
     .warning-box {
-        background-color: #FDEBD0;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-left: 5px solid #F39C12;
-        color: #7d5a29;  /* 深棕色字体 */
+        background-color: #4A3C00;  /* 深黄色背景 */
+        color: #FFD700;  /* 金色文字 */
+        padding: 1.2rem;
+        border-radius: 10px;
+        border-left: 6px solid #FFAA00;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(255, 170, 0, 0.15);
+        border: 1px solid #8B7500;
     }
+    
+    /* 信息提示框 - 深色背景高对比度 */
     .info-box {
-        background-color: #D6EAF8;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-left: 5px solid #3498DB;
-        color: #1c3a56;  /* 深蓝色字体 */
+        background-color: #0A2F4A;  /* 深蓝色背景 */
+        color: #80D4FF;  /* 亮蓝色文字 */
+        padding: 1.2rem;
+        border-radius: 10px;
+        border-left: 6px solid #00AAFF;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0, 170, 255, 0.15);
+        border: 1px solid #1E5A8A;
     }
+    
+    /* 错误提示框 - 深色背景高对比度 */
+    .error-box {
+        background-color: #4A0000;  /* 深红色背景 */
+        color: #FF6666;  /* 亮红色文字 */
+        padding: 1.2rem;
+        border-radius: 10px;
+        border-left: 6px solid #FF4444;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(255, 68, 68, 0.15);
+        border: 1px solid #8B0000;
+    }
+    
+    /* 指标卡片 - 高级玻璃态效果 */
     .metric-card {
-        background-color: #F8F9F9;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border: 1px solid #D5D8DC;
+        background: rgba(30, 40, 60, 0.7);  /* 半透明深色背景 */
+        backdrop-filter: blur(10px);  /* 毛玻璃效果 */
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(100, 150, 255, 0.2);
         text-align: center;
-        color: #2C3E50;  /* 深灰色字体 */
+        color: #FFFFFF;  /* 白色文字 */
+        margin: 0.5rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
     }
+    
+    .metric-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 100, 255, 0.25);
+        border: 1px solid rgba(100, 200, 255, 0.4);
+    }
+    
+    .metric-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #00D4FF, #0080FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0.5rem 0;
+    }
+    
+    .metric-label {
+        font-size: 1rem;
+        color: #CCCCCC;  /* 浅灰色文字 */
+        opacity: 0.9;
+        margin-top: 0.5rem;
+    }
+    
+    /* 高级按钮设计 */
     .stButton>button {
-        background-color: #FF5733;  /* 橙色按钮 */
+        background: linear-gradient(45deg, #0066FF, #00CCFF);  /* 蓝色渐变 */
         color: white;
-        font-weight: bold;
-        border-radius: 0.5rem;
-        padding: 0.5rem 1rem;
+        font-weight: 600;
+        border-radius: 10px;
+        padding: 0.7rem 1.5rem;
         border: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        margin: 0.2rem;
     }
+    
     .stButton>button:hover {
-        background-color: #FF8C66;  /* 悬停时更浅的橙色 */
+        background: linear-gradient(45deg, #0055DD, #00AAFF);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+    }
+    
+    /* 次要按钮 */
+    .stButton>button.secondary {
+        background: linear-gradient(45deg, #6C757D, #495057);  /* 灰色渐变 */
+        box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+    }
+    
+    .stButton>button.secondary:hover {
+        background: linear-gradient(45deg, #5A6268, #3D4348);
+        box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+    }
+    
+    /* 成功按钮 */
+    .stButton>button.success {
+        background: linear-gradient(45deg, #28A745, #20C997);  /* 绿色渐变 */
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    }
+    
+    .stButton>button.success:hover {
+        background: linear-gradient(45deg, #218838, #1DA87A);
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    }
+    
+    /* 数据表格样式 */
+    .dataframe {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dataframe th {
+        background-color: #1E3A5F !important;
+        color: #FFFFFF !important;
+        font-weight: 600;
+        padding: 12px !important;
+    }
+    
+    .dataframe td {
+        background-color: rgba(30, 40, 60, 0.7) !important;
+        color: #DDDDDD !important;
+        padding: 10px !important;
+        border-bottom: 1px solid rgba(100, 150, 255, 0.1) !important;
+    }
+    
+    .dataframe tr:hover td {
+        background-color: rgba(50, 70, 100, 0.8) !important;
+    }
+    
+    /* 侧边栏样式 */
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #0F172A, #1E293B);
+    }
+    
+    [data-testid="stSidebar"] .css-1d391kg {
+        color: #FFFFFF;
+    }
+    
+    /* 分页/选项卡样式 */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 2rem;
+        background-color: transparent;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        background-color: rgba(30, 40, 60, 0.7);
+        border-radius: 8px 8px 0 0;
+        padding: 0.8rem 1.5rem;
+        color: #CCCCCC;
+        border: 1px solid rgba(100, 150, 255, 0.2);
+        border-bottom: none;
+    }
+    
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: rgba(50, 70, 100, 0.8);
+        color: #FFFFFF;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background-color: #1E3A5F !important;
+        color: #FFFFFF !important;
+        font-weight: 600;
+        border: 1px solid #00AAFF !important;
+        border-bottom: none !important;
+    }
+    
+    /* 输入框样式 */
+    .stTextInput>div>div>input,
+    .stNumberInput>div>div>input,
+    .stSelectbox>div>div>div {
+        background-color: rgba(30, 40, 60, 0.7) !important;
+        color: #FFFFFF !important;
+        border: 1px solid rgba(100, 150, 255, 0.3) !important;
+        border-radius: 8px !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    /* 滑块样式 */
+    .stSlider>div>div>div {
+        background-color: rgba(0, 170, 255, 0.3) !important;
+    }
+    
+    .stSlider>div>div>div>div {
+        background-color: #00AAFF !important;
+    }
+    
+    /* 代码块样式 */
+    code {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #FFD700;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        font-family: 'Consolas', monospace;
+        border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    
+    pre {
+        background-color: rgba(10, 20, 40, 0.8) !important;
+        color: #FFD700 !important;
+        border-radius: 10px;
+        border: 1px solid rgba(100, 150, 255, 0.2);
+        padding: 1.5rem !important;
+    }
+    
+    /* 进度条样式 */
+    .stProgress>div>div>div>div {
+        background-color: #00AAFF !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -1886,3 +2094,4 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
