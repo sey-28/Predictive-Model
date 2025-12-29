@@ -58,113 +58,113 @@ st.markdown("""
     
     /* 主标题 - 渐变文字效果 */
     .main-header {
-        font-size: 2.8rem;
-        background: linear-gradient(45deg, #00FFFF, #0080FF, #8000FF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        text-shadow: 0 2px 10px rgba(0, 128, 255, 0.3);
-        padding: 1rem;
-        border-bottom: 3px solid #2A3F5F;
+        font-size: 2.8rem !important;
+        background: linear-gradient(45deg, #00FFFF, #0080FF, #8000FF) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+        font-weight: 700 !important;
+        text-shadow: 0 2px 10px rgba(0, 128, 255, 0.3) !important;
+        padding: 1rem !important;
+        border-bottom: 3px solid #2A3F5F !important;
     }
     
     /* 子标题 - 高对比度设计 */
     .sub-header {
-        font-size: 1.8rem;
-        color: #FFFFFF;  /* 纯白色 */
-        background-color: #1E3A5F;  /* 深蓝色背景 */
-        margin-top: 1.2rem;
-        margin-bottom: 1.2rem;
-        padding: 0.8rem 1.2rem;
-        border-radius: 8px;
-        font-weight: 600;
-        border-left: 5px solid #00D4FF;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        font-size: 1.8rem !important;
+        color: #FFFFFF !important;  /* 纯白色 */
+        background-color: #1E3A5F !important;  /* 深蓝色背景 */
+        margin-top: 1.2rem !important;
+        margin-bottom: 1.2rem !important;
+        padding: 0.8rem 1.2rem !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        border-left: 5px solid #00D4FF !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
     }
     
     /* 成功提示框 - 深色背景高对比度 */
     .success-box {
-        background-color: #0A3D2F;  /* 深绿色背景 */
-        color: #00FFAA;  /* 亮绿色文字 */
-        padding: 1.2rem;
-        border-radius: 10px;
-        border-left: 6px solid #00FF88;
-        margin-bottom: 1rem;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(0, 255, 136, 0.15);
-        border: 1px solid #1B5E45;
+        background-color: #0A3D2F !important;  /* 深绿色背景 */
+        color: #00FFAA !important;  /* 亮绿色文字 */
+        padding: 1.2rem !important;
+        border-radius: 10px !important;
+        border-left: 6px solid #00FF88 !important;
+        margin-bottom: 1rem !important;
+        font-weight: 500 !important;
+        box-shadow: 0 4px 12px rgba(0, 255, 136, 0.15) !important;
+        border: 1px solid #1B5E45 !important;
     }
     
     /* 警告提示框 - 深色背景高对比度 */
     .warning-box {
-        background-color: #4A3C00;  /* 深黄色背景 */
-        color: #FFD700;  /* 金色文字 */
-        padding: 1.2rem;
-        border-radius: 10px;
-        border-left: 6px solid #FFAA00;
-        margin-bottom: 1rem;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(255, 170, 0, 0.15);
-        border: 1px solid #8B7500;
+        background-color: #4A3C00 !important;  /* 深黄色背景 */
+        color: #FFD700 !important;  /* 金色文字 */
+        padding: 1.2rem !important;
+        border-radius: 10px !important;
+        border-left: 6px solid #FFAA00 !important;
+        margin-bottom: 1rem !important;
+        font-weight: 500 !important;
+        box-shadow: 0 4px 12px rgba(255, 170, 0, 0.15) !important;
+        border: 1px solid #8B7500 !important;
     }
     
     /* 信息提示框 - 深色背景高对比度 */
     .info-box {
-        background-color: #0A2F4A;  /* 深蓝色背景 */
-        color: #80D4FF;  /* 亮蓝色文字 */
-        padding: 1.2rem;
-        border-radius: 10px;
-        border-left: 6px solid #00AAFF;
-        margin-bottom: 1rem;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(0, 170, 255, 0.15);
-        border: 1px solid #1E5A8A;
+        background-color: #0A2F4A !important;  /* 深蓝色背景 */
+        color: #80D4FF !important;  /* 亮蓝色文字 */
+        padding: 1.2rem !important;
+        border-radius: 10px !important;
+        border-left: 6px solid #00AAFF !important;
+        margin-bottom: 1rem !important;
+        font-weight: 500 !important;
+        box-shadow: 0 4px 12px rgba(0, 170, 255, 0.15) !important;
+        border: 1px solid #1E5A8A !important;
     }
     
     /* 错误提示框 - 深色背景高对比度 */
     .error-box {
-        background-color: #4A0000;  /* 深红色背景 */
-        color: #FF6666;  /* 亮红色文字 */
-        padding: 1.2rem;
-        border-radius: 10px;
-        border-left: 6px solid #FF4444;
-        margin-bottom: 1rem;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(255, 68, 68, 0.15);
-        border: 1px solid #8B0000;
+        background-color: #4A0000 !important;  /* 深红色背景 */
+        color: #FF6666 !important;  /* 亮红色文字 */
+        padding: 1.2rem !important;
+        border-radius: 10px !important;
+        border-left: 6px solid #FF4444 !important;
+        margin-bottom: 1rem !important;
+        font-weight: 500 !important;
+        box-shadow: 0 4px 12px rgba(255, 68, 68, 0.15) !important;
+        border: 1px solid #8B0000 !important;
     }
     
     /* 指标卡片 - 高级玻璃态效果 */
     .metric-card {
-        background: rgba(30, 40, 60, 0.7);  /* 半透明深色背景 */
-        backdrop-filter: blur(10px);  /* 毛玻璃效果 */
-        padding: 1.5rem;
-        border-radius: 12px;
-        border: 1px solid rgba(100, 150, 255, 0.2);
-        text-align: center;
-        color: #FFFFFF;  /* 白色文字 */
-        margin: 0.5rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
+        background: rgba(30, 40, 60, 0.7) !important;  /* 半透明深色背景 */
+        backdrop-filter: blur(10px) !important;  /* 毛玻璃效果 */
+        padding: 1.5rem !important;
+        border-radius: 12px !important;
+        border: 1px solid rgba(100, 150, 255, 0.2) !important;
+        text-align: center !important;
+        color: #FFFFFF !important;  /* 白色文字 */
+        margin: 0.5rem !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+        transition: all 0.3s ease !important;
     }
     
     .metric-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px rgba(0, 100, 255, 0.25);
-        border: 1px solid rgba(100, 200, 255, 0.4);
+        transform: translateY(-5px) !important;
+        box-shadow: 0 12px 40px rgba(0, 100, 255, 0.25) !important;
+        border: 1px solid rgba(100, 200, 255, 0.4) !important;
     }
     
     .metric-value {
-        font-size: 2.5rem;
-        font-weight: 700;
-        background: linear-gradient(45deg, #00D4FF, #0080FF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin: 0.5rem 0;
+        font-size: 2.5rem !important;
+        font-weight: 700 !important;
+        background: linear-gradient(45deg, #00D4FF, #0080FF) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        margin: 0.5rem 0 !important;
     }
     
     .metric-label {
@@ -2167,6 +2167,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
