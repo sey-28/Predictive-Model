@@ -332,12 +332,6 @@ st.markdown('<div class="main-header">数据分析仪表板</div>', unsafe_allow
 # 使用子标题
 st.markdown('<div class="sub-header">关键指标概览</div>', unsafe_allow_html=True)
 
-# 使用提示框
-st.markdown("""
-<div class="success-box">
-    ✅ 数据加载成功！共处理了10,000条记录。
-</div>
-""", unsafe_allow_html=True)
 
 st.markdown("""
 <div class="warning-box">
@@ -2124,6 +2118,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
