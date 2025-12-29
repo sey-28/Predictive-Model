@@ -323,6 +323,73 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# 使用主标题
+st.markdown('<div class="main-header">数据分析仪表板</div>', unsafe_allow_html=True)
+
+# 使用子标题
+st.markdown('<div class="sub-header">关键指标概览</div>', unsafe_allow_html=True)
+
+# 使用提示框
+st.markdown("""
+<div class="success-box">
+    ✅ 数据加载成功！共处理了10,000条记录。
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="warning-box">
+    ⚠️ 注意：部分数据可能存在缺失值，建议进行数据清洗。
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="info-box">
+    ℹ️ 提示：点击下方按钮可以导出当前分析报告。
+</div>
+""", unsafe_allow_html=True)
+
+# 使用指标卡片
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+    <div class="metric-card">
+        <div class="metric-value">85.2%</div>
+        <div class="metric-label">准确率</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="metric-card">
+        <div class="metric-value">1,245</div>
+        <div class="metric-label">总用户数</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div class="metric-card">
+        <div class="metric-value">$24,580</div>
+        <div class="metric-label">总收入</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# 使用不同样式的按钮
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    if st.button("主要操作", key="primary"):
+        st.success("执行主要操作！")
+
+with col2:
+    if st.button("次要操作", key="secondary"):
+        st.info("执行次要操作！")
+
+with col3:
+    if st.button("成功操作", key="success"):
+        st.success("操作成功！")
+
 # 初始化session state
 if 'uploaded_files' not in st.session_state:
     st.session_state.uploaded_files = []
@@ -2094,4 +2161,5 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
