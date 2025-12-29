@@ -352,20 +352,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# 使用不同样式的按钮
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    if st.button("主要操作", key="primary"):
-        st.success("执行主要操作！")
-
-with col2:
-    if st.button("次要操作", key="secondary"):
-        st.info("执行次要操作！")
-
-with col3:
-    if st.button("成功操作", key="success"):
-        st.success("操作成功！")
 
 # 初始化session state
 if 'uploaded_files' not in st.session_state:
@@ -2138,6 +2124,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
