@@ -329,12 +329,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-# 测试基础样式是否生效
-st.markdown("""
-<div style="background: red; color: white; padding: 20px;">
-    这是一个红色背景的测试框，如果看到红色说明CSS注入成功
-</div>
-""", unsafe_allow_html=True)
 
 # 使用主标题
 st.markdown('<div class="main-header">数据分析仪表板</div>', unsafe_allow_html=True)
@@ -2174,6 +2168,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
