@@ -46,9 +46,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-st.set_page_config(
-    layout="wide"
-)
+
 
 
 # 自定义CSS
@@ -353,32 +351,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# 使用指标卡片
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-    <div class="metric-card">
-        <div class="metric-value">85.2%</div>
-        <div class="metric-label">准确率</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col2:
-    st.markdown("""
-    <div class="metric-card">
-        <div class="metric-value">1,245</div>
-        <div class="metric-label">总用户数</div>
-    </div>
-    """, unsafe_allow_html=True)
-
-with col3:
-    st.markdown("""
-    <div class="metric-card">
-        <div class="metric-value">$24,580</div>
-        <div class="metric-label">总收入</div>
-    </div>
-    """, unsafe_allow_html=True)
 
 # 使用不同样式的按钮
 col1, col2, col3 = st.columns(3)
@@ -2166,6 +2138,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
