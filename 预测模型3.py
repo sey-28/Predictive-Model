@@ -47,8 +47,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 st.set_page_config(
-    page_title="高级仪表板",
-    page_icon="📊",
     layout="wide"
 )
 
@@ -2168,6 +2166,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
