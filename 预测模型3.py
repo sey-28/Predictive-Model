@@ -16,6 +16,7 @@ import os
 import tempfile
 import joblib
 import warnings
+import random
 
 warnings.filterwarnings('ignore')
 
@@ -45,6 +46,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+st.set_page_config(
+    page_title="高级仪表板",
+    page_icon="📊",
+    layout="wide"
+)
+
 
 # 自定义CSS
 st.markdown("""
@@ -2167,6 +2174,7 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
 
 
